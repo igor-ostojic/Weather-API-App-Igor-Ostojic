@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 4rem;
+  /* background : url(patternpad.svg); */
+  background-color: rgb(117, 121, 219);
+}
+
+.title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.title_container {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  animation: slide-in 0.6s ease;
+}
+
+.fa-sun {
+  font-size: 3rem;
+  color: white;
+  animation: rotate 1.2s ease;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(260deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.city {
+  padding: 1rem;
+  width: 50%;
+  height: 10vh;
+  border-radius: 500px;
+  border: none;
+  /* outline: 1px solid #EBECEC; */
+  box-shadow: rgba(50, 53, 133, 0.5) 0px 30px 60px -12px,
+    rgba(50, 53, 133, 0.65) 0px 18px 36px -18px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #383838;
+  transition: all 0.25s;
+  animation: slide-in 0.9s ease;
+}
+
+.city:focus {
+  outline: none;
+  border: none;
+  box-shadow: rgba(50, 53, 133, 0.6) 0px 30px 60px -12px,
+    rgba(50, 53, 133, 0.75) 0px 18px 36px -18px;
+}
+
+.city::placeholder {
+  color: rgb(190, 190, 190);
+}
+
+.weather-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  transition: all 0.4s;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.weather-image {
+  width: 40%;
+}
+
+.city-name {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.temperature {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.weather-info {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #f0f0f0;
+  font-weight: 300;
+}
+
+@media (max-width: 700px) {
+  body {
+    gap: 2.5rem;
+  }
+  .city {
+    width: 85%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .fa-sun {
+    font-size: 1.5rem;
+  }
+}
